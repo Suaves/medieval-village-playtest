@@ -67,6 +67,10 @@ crashlytics-build.properties
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
+# Licensed catalog content is installed locally from its provenance ledger and
+# must never be distributed through this source repository.
+/[Aa]ssets/[Ll]ocal[Ll]icensed[Aa]ssets/
+
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
