@@ -18,7 +18,6 @@ namespace MedievalVillageDefense.ProjectBootstrap
             "com.unity.ai.navigation",
             "com.unity.ide.visualstudio",
             "com.unity.render-pipelines.universal",
-            "com.unity.textmeshpro",
             "com.unity.timeline"
         };
 

@@ -12,8 +12,10 @@ Those assets have no complete provenance record and must not be introduced into
 a commercial build until individually verified. The reserved
 `Assets/ThirdPartyQuarantine/` directory is excluded from production use.
 
-Do not open this project in Unity 6000 yet: its source configuration remains
-unchanged at Unity 2022.3.5f1 / URP 14 pending an explicit migration task.
+The Unity 6000.0.17f1 migration bootstrap is complete. The project uses URP 17
+and includes a project-owned primitive smoke scene; see
+[Docs/Unity6000MigrationStatus.md](Docs/Unity6000MigrationStatus.md) for the
+exact validation evidence and remaining scope.
 
 See [Docs/SourceAudit.md](Docs/SourceAudit.md),
 [Docs/CatalogIntegration.md](Docs/CatalogIntegration.md), and

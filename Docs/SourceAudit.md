@@ -43,18 +43,19 @@ asset-level approval record exists.
 
 ## Unity 6000.0.17f1 compatibility
 
-**Not compatible as-is; migration deferred.** The baseline deliberately retains
-the upstream Unity 2022.3.5f1 project version and URP 14 package graph. Unity
-6000.0.17f1 requires an explicit project/package upgrade and re-validation of
-URP materials, AI Navigation/NavMesh data, TextMesh Pro, serialized project
-settings, legacy input, and target builds. No such migration or import has
-been performed.
+**Migration bootstrap validated on 2026-10-10.** The project imported and its
+final Unity compilation and Windows player build succeeded in Unity
+`6000.0.17f1`; package resolution produced URP `17.0.3`, AI Navigation `2.0.16`,
+Visual Studio `2.0.28`, Timeline `1.8.13`, and UGUI `2.0.0`.
+The deprecated standalone TextMeshPro package was removed because UGUI 2.0
+contains TMP and both packages create immutable GUID conflicts.
 
-The C# gameplay architecture is likely portable after that migration: it uses
-standard MonoBehaviour, ScriptableObject, NavMeshAgent/Obstacle, UGUI, and
-legacy `Input` APIs. This is an inference from code inspection, not a Unity 6
-compile result. The future migration gate is: clean Unity 6000 import, compile
-with no errors, then an isolated scene smoke test before any gameplay change.
+The project-owned `Assets/Scenes/Unity6000Bootstrap.unity` is a primitive-only
+smoke scene with a baked complete NavMesh route, a carving NavMeshObstacle, and
+verified legacy placement-input bindings. A Windows development build and
+D3D-backed player smoke completed successfully. This validates the migration
+bootstrap, not the upstream gameplay content or the larger first-playable
+milestone.
 
 ## Constraints
 
